@@ -18,7 +18,7 @@ model.add(LSTM(32, activation='tanh', return_sequences=True))
 model.add(Dropout(0.3))
 model.add(Flatten())
 model.add(Dense(128, activation='relu'))
-model.add(Dense(2, activation='softmax'))
+model.add(Dense(2, activation='sigmoid'))
 model.summary()
 
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
